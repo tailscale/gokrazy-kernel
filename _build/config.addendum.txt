@@ -79,39 +79,12 @@ CONFIG_NF_CONNTRACK_SANE=n
 CONFIG_NF_CONNTRACK_SIP=n
 CONFIG_NF_CONNTRACK_TFTP=n
 
-# For using USB mass storage
-CONFIG_USB_EHCI_HCD=y
-CONFIG_USB_XHCI_HCD=y
-CONFIG_USB_DEVICEFS=y
-CONFIG_USB_STORAGE=y
-
 # For NVMe storage
 CONFIG_NVME_CORE=y
 CONFIG_BLK_DEV_NVME=y
 CONFIG_NVME_MULTIPATH=y
 CONFIG_NVME_HWMON=y
 CONFIG_NVME_TARGET_PASSTHRU=y
-
-# For https://www.fs.com/products/75602.html and https://www.fs.com/products/75603.html network cards:
-CONFIG_I40E=y
-
-# For Intel E810 series network cards:
-CONFIG_ICE=y
-
-# For Broadcom 57414 10/25 Gbit/s network card:
-CONFIG_BNXT=y
-
-# For Mellanox ConnectX-4 25 Gbit/s network cards:
-CONFIG_MLX5_EN=y
-CONFIG_MLX5_CORE=y
-CONFIG_MLX5_CORE_EN=y
-CONFIG_MLX5_INFINIBAND=n
-
-# For apu2c4 ethernet ports
-CONFIG_IGB=y
-
-# For Intel I225 ethernet ports (ASRock B550 Taichi):
-CONFIG_IGC=y
 
 # For /proc/config.gz
 CONFIG_IKCONFIG=y
@@ -120,24 +93,12 @@ CONFIG_IKCONFIG_PROC=y
 # For kexec
 CONFIG_KEXEC_FILE=y
 
-# For apu2c4 watchdog
-CONFIG_SP5100_TCO=y
-
 # For WireGuard
 CONFIG_NET_UDP_TUNNEL=y
 CONFIG_WIREGUARD=y
 
 # For traffic shaping using tc:
 CONFIG_NET_SCH_TBF=y
-
-# For measuring CPU temperature:
-CONFIG_SENSORS_K10TEMP=y
-
-# For measuring non-CPU temperature and fan speeds:
-CONFIG_SENSORS_NCT6683=y
-
-# For Corsair Commander Pro fan controller:
-CONFIG_SENSORS_CORSAIR_CPRO=y
 
 # For iproute2’s ss(8):
 CONFIG_INET_DIAG=y
@@ -160,6 +121,12 @@ CONFIG_KVM=y
 CONFIG_KVM_INTEL=y
 CONFIG_KVM_AMD=y
 CONFIG_KVM_AMD_SEV=y
+
+# For EC2:
+CONFIG_XEN=y
+CONFIG_XEN_DOM0=y
+CONFIG_XEN_PRIVILEGED_GUEST=y
+CONFIG_XEN_PVHVM=y
 
 # For bridge ethernet devices:
 CONFIG_BRIDGE=y
