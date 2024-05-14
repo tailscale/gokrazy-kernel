@@ -1,4 +1,4 @@
-module github.com/rtr7/kernel
+module github.com/tailscale/gokrazy-kernel
 
 go 1.17
 
